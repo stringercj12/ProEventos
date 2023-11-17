@@ -7,13 +7,13 @@ namespace ProEventos.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class EventoController : ControllerBase
+public class EventosController : ControllerBase
 {
 
     private readonly AppDbContext _context;
-    private readonly ILogger<EventoController> _logger;
+    private readonly ILogger<EventosController> _logger;
 
-    public EventoController(ILogger<EventoController> logger,AppDbContext context)
+    public EventosController(ILogger<EventosController> logger,AppDbContext context)
     {
         _context = context;
         _logger = logger;

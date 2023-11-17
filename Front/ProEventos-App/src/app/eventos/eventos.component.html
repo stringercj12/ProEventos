@@ -1,0 +1,28 @@
+<form class="form">
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>Buscar evento</mat-label>
+    <input type="text" matInput [formControl]="searchFormControl"
+           placeholder="Ex. Angular e . NET 7">
+  </mat-form-field>
+</form>
+<div class="grid">
+  <ng-container *ngFor="let evento of eventos | buscarEvento: searchFormControl.value">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <img mat-card-avatar [src]="evento.imagemUrl" alt="Imagem de quem criou o evento">
+        <mat-card-title>{{evento.tema}}</mat-card-title>
+        <mat-card-subtitle>{{evento.dataDoEvento}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="evento.imagemUrl" alt="Imagem do evento">
+      <mat-card-content>
+        <p>
+          {{evento.local}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>

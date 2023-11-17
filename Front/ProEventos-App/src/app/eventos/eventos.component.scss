@@ -1,0 +1,15 @@
+
+
+img[mat-card-avatar]{
+  border: 1px solid #cecece;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.5rem;
+}
+
+.form {
+  margin-bottom: 40px;
+}
